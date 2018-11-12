@@ -5,6 +5,7 @@ declare(strict_types=1);
 
 namespace App\Command;
 
+use App\Context\LawSuit\Module\LawSuit\Application\LawSuitUseCase;
 use App\Context\LawSuit\Module\LawSuit\Domain\Entity\King;
 use App\Context\LawSuit\Module\LawSuit\Domain\Entity\LawSuit;
 use App\Context\LawSuit\Module\LawSuit\Domain\Entity\Notary;
@@ -35,8 +36,8 @@ class LawSuitCommand extends Command
         $partTwo->addRole(new Notary());
         $partTwo->addRole(new Validator());
 
-        $lawSuit = new LawSuit($partOne, $partTwo);
-        $winner  = $lawSuit->winner();
+        $lawSuitUseCase = new LawSuitUseCase();
+        $winner = $lawSuitUseCase($partOne, $partTwo);
 
         $output->writeln('The winner is <info>' . $winner . '</info>');
     }
