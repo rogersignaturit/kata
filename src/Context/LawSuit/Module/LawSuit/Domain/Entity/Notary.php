@@ -11,9 +11,9 @@ final class Notary
     private $name;
     private $value;
 
-    public function __construct(string $name)
+    public function __construct()
     {
-        $this->name  = $name;
+        $this->name  = 'NOTARY';
         $this->value = self::NOTARY_VALUE;
     }
 

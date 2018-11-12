@@ -11,9 +11,9 @@ final class King
     private $name;
     private $value;
 
-    public function __construct(string $name)
+    public function __construct()
     {
-        $this->name  = $name;
+        $this->name  = 'KING';
         $this->value = self::KING_VALUE;
     }
 

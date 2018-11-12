@@ -11,12 +11,11 @@ final class Validator
     private $name;
     private $value;
 
-    public function __construct(string $name)
+    public function __construct()
     {
-        $this->name  = $name;
+        $this->name  = 'VALIDATOR';
         $this->value = self::VALIDATOR_VALUE;
     }
-
 
     public function name(): string
     {
