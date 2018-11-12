@@ -7,13 +7,14 @@ namespace App\Context\LawSuit\Module\LawSuit\Domain\Entity;
 final class Notary
 {
     private const NOTARY_VALUE = 2;
+    private const NOTARY = 'NOTARY';
 
     private $name;
     private $value;
 
     public function __construct()
     {
-        $this->name  = 'NOTARY';
+        $this->name  = self::NOTARY;
         $this->value = self::NOTARY_VALUE;
     }
 

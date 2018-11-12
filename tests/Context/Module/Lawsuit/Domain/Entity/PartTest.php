@@ -41,6 +41,6 @@ final class PartTest extends TestCase
         $partOne->addRole(new Validator());
 
         $this->assertEquals(3, $partOne->countRoles());
-        $this->assertEquals(8, $partOne->calculatePoints());
+        $this->assertEquals(7, $partOne->calculatePoints());
     }
 }

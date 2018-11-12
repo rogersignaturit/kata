@@ -7,13 +7,14 @@ namespace App\Context\LawSuit\Module\LawSuit\Domain\Entity;
 final class King
 {
     private const KING_VALUE = 5;
+    private const KING = 'KING';
 
     private $name;
     private $value;
 
     public function __construct()
     {
-        $this->name  = 'KING';
+        $this->name  = self::KING;
         $this->value = self::KING_VALUE;
     }
 

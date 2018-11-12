@@ -7,13 +7,14 @@ namespace App\Context\LawSuit\Module\LawSuit\Domain\Entity;
 final class Validator
 {
     private const VALIDATOR_VALUE = 1;
+    private const VALIDATOR = 'VALIDATOR';
 
     private $name;
     private $value;
 
     public function __construct()
     {
-        $this->name  = 'VALIDATOR';
+        $this->name  = self::VALIDATOR;
         $this->value = self::VALIDATOR_VALUE;
     }
 
